@@ -8,3 +8,4 @@
 ## If you wont to build exec, use pyinstaller and spec file: 
 1. change path to icon in spec file
 2. pyinstaller russia_forever.spec
+3. check dist folder
