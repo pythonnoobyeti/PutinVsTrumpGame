@@ -1,7 +1,7 @@
 # Putin VS Trump
 ## To start:
 1. python -m venv venv
-2. bash: source ll-env/Scripts/activate, windows: ll-env\Scripts\activate
+2. bash: source venv/Scripts/activate, windows: venv\Scripts\activate
 3. pip install -r requirements.txt
 4. python russia_forever.py
 
