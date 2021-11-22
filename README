@@ -1,6 +1,6 @@
 # Putin VS Trump
 ## To start:
-1) python -m venv venv
-2) python russia_forever.py
+1. python -m venv venv
+2. python russia_forever.py
 
 ## If you wont to build exec, use pyinstaller and spec file (pyinstaller russia_forever.spec).
