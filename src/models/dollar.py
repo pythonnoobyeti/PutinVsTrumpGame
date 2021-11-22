@@ -1,5 +1,6 @@
 import pygame
 from pygame.sprite import Sprite
+from src.utils.game_function import resource_path
 
 class Dollar(Sprite):
     '''Класс для доллара'''
@@ -9,7 +10,7 @@ class Dollar(Sprite):
         super().__init__()
         self.ayf_settings = ayf_settings
         self.trump = trump
-        self.image = pygame.image.load('src/images/dol.bmp')
+        self.image = pygame.image.load(resource_path('src/images/dol.bmp'))
         self.rect = self.image.get_rect()
         
         #Определение начальных координат

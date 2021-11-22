@@ -1,5 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
+from src.utils.game_function import resource_path
+
 
 class Putin_small(Sprite):
     '''Класс создания иконок путина'''
@@ -8,6 +10,6 @@ class Putin_small(Sprite):
         super().__init__()
         self.screen = screen
         self.ayf_settings = ayf_settings
-        self.image = pygame.image.load('src/images/Putin_small.bmp')
+        self.image = pygame.image.load(resource_path('src/images/Putin_small.bmp'))
         self.rect = self.image.get_rect()
         self.screen_rect = self.screen.get_rect()

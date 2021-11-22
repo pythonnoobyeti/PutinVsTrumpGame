@@ -1,4 +1,6 @@
 import pygame
+from src.utils.game_function import resource_path
+
 
 class Putin():
     '''Класс создания Путина'''
@@ -7,9 +9,9 @@ class Putin():
         self.sb = sb
         self.screen = screen
         self.ayf_settings = ayf_settings
-        self.putin_images = [pygame.image.load('src/images/Putin_1.bmp'),
-             pygame.image.load('src/images/Putin_2.bmp'), 
-             pygame.image.load('src/images/Putin_3.bmp')]
+        self.putin_images = [pygame.image.load(resource_path('src/images/Putin_1.bmp')),
+             pygame.image.load(resource_path('src/images/Putin_2.bmp')), 
+             pygame.image.load(resource_path('src/images/Putin_3.bmp'))]
         self.image = self.putin_images[0]
         self.rect = self.image.get_rect()
         self.screen_rect = self.screen.get_rect()

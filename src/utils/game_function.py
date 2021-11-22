@@ -1,10 +1,22 @@
-import pygame
-import sys
-from src.models.rubls import Rub
-from time import sleep
-from src.models.trump import Trump
+import sys, os, pygame
 from random import randint
+from time import sleep
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
+from src.models.rubls import Rub
+from src.models.trump import Trump
 from src.models.dollar import Dollar
+
 
 
 def check_key_down(event, putin, rubs, ayf_settings, statistic):
@@ -150,9 +162,9 @@ def putin_victory(screen, statistic, dollars, rubs, sd):
         dollars.empty()
         rubs.empty()
         #Загрузка победных изображений
-        image_1 = pygame.image.load('../images/russia.bmp')
-        image_2 = pygame.image.load('../images/exp.bmp')
-        image_3 = pygame.image.load('../images/putin_fin.bmp')
+        image_1 = pygame.image.load(resource_path('src/images/russia.bmp'))
+        image_2 = pygame.image.load(resource_path('src/images/exp.bmp'))
+        image_3 = pygame.image.load(resource_path('src/images/putin_fin.bmp'))
         #Отрисовка прямоугольников изображений и экрана
         rect_1 = image_1.get_rect()
         rect_2 = image_2.get_rect()
@@ -178,9 +190,9 @@ def trump_victory(screen, statistic, dollars, rubs, sd):
         dollars.empty()
         rubs.empty()
         #Загрузка победных изображений
-        image_1 = pygame.image.load('../images/america.bmp')
-        image_2 = pygame.image.load('../images/statue.bmp')
-        image_3 = pygame.image.load('../images/trump_fin.bmp')
+        image_1 = pygame.image.load(resource_path('src/images/america.bmp'))
+        image_2 = pygame.image.load(resource_path('src/images/statue.bmp'))
+        image_3 = pygame.image.load(resource_path('src/images/trump_fin.bmp'))
         #Отрисовка прямоугольников изображений и экрана
         rect_1 = image_1.get_rect()
         rect_2 = image_2.get_rect()

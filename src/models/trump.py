@@ -1,12 +1,14 @@
 import pygame
+from src.utils.game_function import resource_path
+
 
 class Trump():
     '''Класс для Трампа'''
     def __init__(self, screen, ayf_settings, statistic):
         '''Инициализация атрибутов'''
         self.statistic = statistic
-        self.trump_images = [pygame.image.load('src/images/Trump_1.bmp'),
-             pygame.image.load('src/images/Trump_2.bmp')]
+        self.trump_images = [pygame.image.load(resource_path('src/images/Trump_1.bmp')),
+             pygame.image.load(resource_path('src/images/Trump_2.bmp'))]
         self.image = self.trump_images[0]
         self.screen = screen
         self.ayf_settings = ayf_settings

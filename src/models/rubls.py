@@ -1,5 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
+from src.utils.game_function import resource_path
+
 
 class Rub(Sprite):
     '''Класс для создания рублей, наследует от Sprite'''
@@ -9,7 +11,7 @@ class Rub(Sprite):
         super().__init__()
         self.putin = putin
         self.ayf_settings = ayf_settings
-        self.image = pygame.image.load('src/images/rub.bmp')
+        self.image = pygame.image.load(resource_path('src/images/rub.bmp'))
         self.rect = self.image.get_rect()
         
         #Определение начальной координаты

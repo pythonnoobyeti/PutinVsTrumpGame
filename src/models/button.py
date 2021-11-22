@@ -1,4 +1,5 @@
 import pygame.font
+from src.utils.game_function import resource_path
 
 class Button():
     '''Класс кнопки пуска игры'''
@@ -18,7 +19,7 @@ class Button():
         #кнопки
         self.rect = pygame.Rect(0, 0, self.width, self.height)
         self.rect.center = self.screen_rect.center
-        self.image = pygame.image.load('src/images/play.bmp')
+        self.image = pygame.image.load(resource_path('src/images/play.bmp'))
         self.image_rect = self.image.get_rect()
         self.image_rect.centerx = self.rect.centerx
         self.image_rect.centery = self.rect.centery

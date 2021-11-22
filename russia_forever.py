@@ -55,4 +55,3 @@ def run_game():
            statistic, dollars, sb, sd)
 
 run_game()
-        
